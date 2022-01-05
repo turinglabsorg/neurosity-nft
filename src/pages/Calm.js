@@ -3,6 +3,7 @@ import { navigate } from "@reach/router";
 
 import { notion, useNotion } from "../services/notion";
 import { Nav } from "../components/Nav";
+const QRCode = require('qrcode.react');
 
 export function Calm() {
   const { user } = useNotion();
@@ -56,14 +57,19 @@ export function Calm() {
 
   return (
     <main className="main-container">
-      {user ? <Nav /> : null}
-      <div className="calm-score">
-        &nbsp;{calm}% <div className="calm-word">Calm</div>
+      <div style={{ width: "20%", float: "left"}}>
+        {user ? <Nav /> : null}
+        <div className="calm-score">
+          &nbsp;{calm}% <div className="calm-word">Calm</div>
+        </div>
+        <div className="calm-score">
+          &nbsp;{focus}% <div className="calm-word">Focus</div>
+        </div>
       </div>
-      <div className="calm-score">
-        &nbsp;{focus}% <div className="calm-word">Focus</div>
+      <div style={{ width: "80%", float: "left", textAlign: "center"}}>
+        <div style={{ width: "500px", height: "500px", display: "inline-block", margin: "0 25px", overflow: "hidden", "word-break": "break-all" }}>{seed}</div>
+        <QRCode value={seed} style={{ width: "500px", height: "500px", margin: "0 25px", display: "inline-block" }} />
       </div>
-      <div style={{width: "300px", height: "300px", display: "block", overflow: "hidden", "word-break": "break-all" }}>{seed}</div>
     </main>
   );
 }

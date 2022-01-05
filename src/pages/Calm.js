@@ -57,7 +57,7 @@ export function Calm() {
 
   return (
     <main className="main-container">
-      <div style={{ width: "20%", float: "left"}}>
+      <div style={{ width: "20%", float: "left", textAlign: "center"}}>
         {user ? <Nav /> : null}
         <div className="calm-score">
           &nbsp;{calm}% <div className="calm-word">Calm</div>

@@ -1,0 +1,214 @@
+/**
+ * Global styles
+ */
+
+body {
+  margin: 0;
+  background-color: #e6ecef;
+  height: 100vh;
+  font-size: 19px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-wrap: wrap;
+}
+
+select {
+  padding: 10px;
+  font-size: 16px;
+}
+
+.unstyled-link,
+.unstyled-link:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+/**
+ * components/LoginForm.js
+ */
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form .row {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form label {
+  font-weight: 500;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 12px 10px;
+  font-size: 14px;
+  border: 0;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: #e6ecef;
+  font-family: monospace;
+}
+
+/**
+ * card
+ */
+
+.card {
+  background: #000c14;
+  color: rgb(147, 147, 147);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 300px;
+  min-height: 150px;
+  padding: 30px 20px;
+  border-radius: 8px;
+  margin: 20px;
+}
+
+.card-heading {
+  margin: 0 0 20px 0;
+  color: white;
+}
+
+.card-btn {
+  background: rgb(113, 211, 211);
+  color: #000c14;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: inherit;
+  margin-top: 16px;
+  cursor: pointer;
+}
+
+.card-link {
+  font-size: 17px;
+  color: darkslategray;
+  text-decoration: none;
+}
+
+.card-footer {
+  color: darkslategray;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.card-footer-cta {
+  display: block;
+  align-self: center;
+}
+
+.card-footer-credits {
+  font-size: 10px;
+  margin-top: 10px;
+}
+
+.card-footer-credits .card-link {
+  font-size: inherit;
+}
+
+.card-error {
+  color: cadetblue;
+  margin: 0 0 12px 0;
+}
+
+/**
+ * components/Status.js
+ */
+
+.status-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  font-size: 0;
+  margin: 0 17px 2px 6px;
+  display: inline-block;
+}
+
+.status-item {
+  margin-bottom: 8px;
+  padding-top: 8px;
+  border-top: 2px solid rgb(0, 26, 43);
+}
+
+.status-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+/**
+ * components/Loading.js
+ */
+
+.loading-container {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading-spinner {
+  border-radius: 50%;
+  border: 8px solid rgba(113, 211, 211, 0.5);
+  border-top: 8px solid rgb(113, 211, 211);
+  height: 40px;
+  width: 40px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/**
+ * pages/Calm.js
+ */
+.calm-score {
+  font-size: 100px;
+  color: darkslategray;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 70px;
+  font-size: 66px;
+  line-height: 54px;
+  border: 20px solid rgb(113, 211, 211);
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  padding: 0;
+  margin: 50px;
+}
+
+.calm-word {
+  font-size: 40px;
+}

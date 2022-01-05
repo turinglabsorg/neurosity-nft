@@ -1,0 +1,32 @@
+{
+  "name": "notion-react-starter",
+  "version": "0.1.0",
+  "dependencies": {
+    "@neurosity/notion": "^5.3.0",
+    "@reach/router": "^1.2.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-scripts": "^3.4.3",
+    "react-use": "^13.21.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
